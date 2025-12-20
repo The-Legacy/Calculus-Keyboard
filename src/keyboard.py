@@ -24,4 +24,16 @@ class KeyboardHandler:
             *keys: Key codes from keyboard module
         """
         self.kbd.press(*keys)
-        self.kbd.release(*keys)
+        self.kbd.release(*keys) 
+
+    def send_hotkey(self, *keys):
+        """
+        Send a hotkey combination (press all, then release all)
+        
+        Args:
+            *keys: Key codes to press simultaneously
+        """
+        for key in keys:
+            self.kbd.press(key)
+        for key in keys:
+            self.kbd.release(key)

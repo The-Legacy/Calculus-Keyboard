@@ -16,7 +16,7 @@ BUTTON_PINS = [
     board.GP8,
 ]
 
-DEBOUNCE_TIME = 0.02 # 20ms debounce
+DEBOUNCE_TIME = 0.5 # 20ms debounce
 
 class ButtonHandler:
     
